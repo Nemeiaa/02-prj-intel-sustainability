@@ -1,1 +1,139 @@
-/* Add your CSS here */
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Use Atkinson Hyperlegible Next for all text for readability */
+body {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+}
+
+/* Hero section with a blue gradient background */
+.hero {
+  /* Gradient background from a lighter to a deeper blue */
+  background: linear-gradient(135deg, #4f8ef7 0%, #003366 100%);
+  color: white; /* Make text easy to read */
+  padding: 60px 20px; /* Add space above and below */
+  text-align: center; /* Center all content */
+}
+
+/* Container for hero content */
+.hero-content {
+  max-width: 600px; /* Limit width for readability */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Intel logo styling */
+.hero-logo {
+  width: 180px; /* Make logo large */
+  margin-bottom: 24px; /* Space below logo */
+}
+
+/* Main heading styling */
+.hero-title {
+  font-size: 2.5em; /* Large font for main title */
+  margin-bottom: 24px; /* Space below heading */
+  font-weight: bold;
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  font-size: 1.2em; /* Smaller than main heading */
+  margin-bottom: 0; /* No extra space needed */
+  color: #e0e7ef; /* Slightly lighter for contrast */
+}
+
+/* Container for all cards */
+.card-container {
+  display: flex; /* Arrange cards in a row */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+  margin: 40px 0; /* Space above and below the card section */
+  /* Remove horizontal scrolling and fixed width */
+  overflow-x: unset;
+  padding-bottom: 0;
+}
+
+/* Individual card styling */
+.card {
+  background: #ffffff; /* White background for cards */
+  color: #222; /* Dark text for readability */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow for card effect */
+  padding: 8px; /* Slightly less padding */
+  width: 270px; /* Slightly smaller width */
+  min-height: 300px; /* Slightly smaller height */
+  text-align: center; /* Center text and images */
+  transition: transform 0.2s; /* Smooth effect on hover */
+  position: relative; /* Needed for absolute overlay */
+}
+
+/* Make cards stand out a bit when hovered */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Card images */
+.card img {
+  width: 90%; /* Make image fill the card width */
+  height: 200px; /* Slightly smaller image height */
+  object-fit: cover; /* Crop image to fill area without distortion */
+  border-radius: 6px; /* Slightly rounded image corners */
+  margin-bottom: 8px; /* Less space below image */
+}
+
+/* Card description overlay - hidden by default */
+.card-description {
+  display: flex; /* Use flex to center text */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  position: absolute; /* Position over the card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 42, 80, 0.92); /* Dark shadow background */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px; /* Match card corners */
+  padding: 24px; /* Space for text */
+  box-sizing: border-box;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent accidental hover when hidden */
+  transition: opacity 0.2s;
+  text-align: center;
+  z-index: 1; /* Make sure overlay is above card content */
+}
+
+/* Show the overlay when the card is hovered */
+.card:hover .card-description {
+  opacity: 1; /* Fade in overlay */
+  pointer-events: auto; /* Allow interaction */
+}
+
+/* Optional: Hide the description's space when not hovered */
+.card p {
+  margin: 0;
+}
+  border-radius: 10px; /* Match card corners */
+  padding: 24px; /* Space for text */
+  box-sizing: border-box;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent accidental hover when hidden */
+  transition: opacity 0.2s;
+  text-align: center;
+  z-index: 1; /* Make sure overlay is above card content */
+}
+
+/* Show the overlay when the card is hovered */
+.card:hover .card-description {
+  opacity: 1; /* Fade in overlay */
+  pointer-events: auto; /* Allow interaction */
+}
+
+/* Optional: Hide the description's space when not hovered */
+.card p {
+  margin: 0;
+}
