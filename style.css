@@ -58,7 +58,7 @@ body::before {
 
 /* Subtitle styling */
 .hero-subtitle {
-  font-size: 1.2em; /* Smaller than main heading */
+  font-size: 1.3em; /* Smaller than main heading */
   margin-bottom: 0; /* No extra space needed */
   color: #e0e7ef; /* Slightly lighter for contrast */
 }
@@ -102,7 +102,7 @@ body::before {
   /* On hover, use a left-to-right gradient from light blue to dark blue */
   background: linear-gradient(to right, rgba(173, 216, 230, 1), #003366); /* Light blue to dark blue */
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 6px 16px rgba(59, 106, 235, 0.767);
+  box-shadow: 0 6px 24px rgba(104, 144, 255, 0.767);
 }
 
 /* Card images */
@@ -112,6 +112,7 @@ body::before {
   object-fit: cover; /* Crop image to fill area without distortion */
   border-radius: 6px; /* Slightly rounded image corners */
   margin-bottom: 8px; /* Less space below image */
+  margin-top: 8px; /* Add space above the image */
 }
 
 /* Card description overlay - hidden by default */
